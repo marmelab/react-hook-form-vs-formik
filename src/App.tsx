@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import "./App.css";
+import React from "react";
+import * as MUI from "@material-ui/core";
+import { ReactHookForm } from "./ReactHookForm";
+import { FormikForm } from "./FormikForm";
+const App = () => (
+    <MUI.Box
+        className="App"
+        display="flex"
+        flexDirection="row"
+        justifyContent="center"
+        alignItems="flex-start"
+    >
+        <MUI.Box
+            display="flex"
+            padding="16px"
+            width="40%"
+            justifyContent="center"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+            <ReactHookForm />
+        </MUI.Box>
+        <MUI.Box
+            display="flex"
+            padding="16px"
+            width="40%"
+            justifyContent="center"
+        >
+            <FormikForm />
+        </MUI.Box>
+    </MUI.Box>
+);
 
 export default App;
